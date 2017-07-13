@@ -1,0 +1,47 @@
+$marge: 20px;
+
+.home-page-summary{
+  width: calc(100vw - (#{$marge} *2));
+  height: calc(100vh - (#{$marge} *2));
+  margin: $marge $marge;
+  background: url("../images/bg-home.jpg");
+  background-size: cover;
+  background-position: top center;
+  //position: relative;
+}
+div[class^="bg-"] {
+  width: 100%;
+  height: 100%;
+  width: calc(100vw - (#{$marge} *2));
+  height: calc(100vh - (#{$marge} *2));
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: $marge;
+  left: $marge;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+  //transition: 1s;
+  //transition-delay: 1s;
+}
+.current{
+  visibility: visible!important;
+  opacity: 1!important;
+  z-index: 3!important;
+  transition-delay: 0s!important;
+}
+.bg-histoire{
+  background: url("../images/bg-histoire.jpg");
+}
+.bg-savoir{
+  background: url("../images/bg-savoir.jpg");
+}
+.bg-realisation{
+  background: url("../images/bg-realisation.jpg");
+}
+.bg-contact{
+  background: url("../images/bg-contact.jpg");
+}
+
