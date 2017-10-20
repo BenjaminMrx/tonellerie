@@ -32,16 +32,47 @@ div[class^="bg-"] {
   z-index: 3!important;
   transition-delay: 0s!important;
 }
-.bg-histoire{
-  background: url("../images/bg-histoire.jpg");
-}
-.bg-savoir{
-  background: url("../images/bg-savoir.jpg");
-}
-.bg-realisation{
-  background: url("../images/bg-realisation.jpg");
-}
-.bg-contact{
-  background: url("../images/bg-contact.jpg");
+//.bg-histoire{
+//  background: url("../images/bg-histoire.jpg");
+//}
+//.bg-savoir{
+//  background: url("../images/bg-savoir2.jpg");
+//}
+//.bg-realisation{
+//  background: url("../images/bg-realisation2.jpg");
+//}
+//.bg-contact{
+//  background: url("../images/bg-contact.jpg");
+//}
+.home{
+  nav{
+    width: inherit;
+    height: inherit;
+    left: inherit;
+    right: $marge;
+    top: $marge;
+    padding: 10px;
+    ul{
+      li{
+        float: left;
+
+        a {
+          display: inline-block;
+          text-transform: uppercase;
+          color: #222222;
+          font-size: 18px;
+          //font-family: "Roboto";
+          letter-spacing: 2px;
+          padding:0 10px;
+          transition: .4s;
+        }
+        a:hover{
+          color: #fff;
+          margin-left: 0px;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
 }
 

@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var _this = this;
 
       TweenLite.to(container.children('nav'), .4, {
-        left: '-50px',
+        top: '0px',
       });
 
       TweenLite.to([container.children('nav'), container.children('.home-page-summary')], .4, {
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ease: Power2.easeInOut,
       });
       TweenLite.to(_this.cloneThumb, 1, {
-        height: '700px',
+        height: '400px',
         delay: .6,
         ease: Power2.easeInOut,
         onComplete: function() {

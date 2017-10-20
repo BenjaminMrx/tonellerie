@@ -1,5 +1,26 @@
 .histoire{
   header{
     background-image: url("../images/bg-histoire.jpg");
+    .title h1{
+    }
+  }
+  .content-page {
+    section {
+      position: relative;
+      z-index: 1;
+      .under-part{
+        position: absolute;
+        top: 50%;
+        left: -410px;
+        transform: translateY(-50%);
+        z-index: 0;
+        opacity: .6;
+        width: 450px;
+      }
+      p{
+        position: relative;
+        z-index: 1;
+      }
+    }
   }
 }
