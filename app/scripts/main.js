@@ -347,5 +347,38 @@ $(document).ready(function () {
   newPageInit();
   onScroll();
 
+  $(".slide img").on('click', function () {
+    console.log('next');
+    let current = $('.slide.current');
+    let next;
+    if(current.is(':last-child')){
+      next = $('.slide:first-child');
+    }else{
+      next = $('.slide:eq('+ (current.index()+1) + ')');
+    }
+    let delay = .6;
+    TweenLite.to(current.find('.overlay'), delay, {
+      height: '100%',
+      ease: Power4.easeOut,
+      onComplete: function () {
+
+        current.removeClass('current');
+        next.addClass('current');
+      }
+    });
+    TweenLite.set(current, {
+      autoAlpha : 0,
+      delay: delay
+    });
+    TweenLite.set(next, {
+      autoAlpha : 1,
+      delay: delay
+    });
+    TweenLite.to(next.find('.overlay'), delay, {
+      height: '0%',
+      ease: Power4.easeIn,
+      delay: delay
+    });
+  });
 });
 
